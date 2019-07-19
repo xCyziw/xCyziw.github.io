@@ -1,0 +1,221 @@
+/* STRUCTURAL */
+body {
+  background-color: #efefef;
+  color: #272727;
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  color: #1d1d1d;
+  background-color: #e0e0e0;
+  text-align: center;
+  text-transform: uppercase;
+  border-left: 1rem solid #ff3b3f;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #9b9b9b;
+  border-bottom: 1px solid #ff3b3f;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
+  font-size: 1.3rem;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ff3b3f;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+a {
+  color: #808080;
+}
+a:hover,
+a:active {
+  color: #9b9b9b;
+  text-decoration: none;
+  border-bottom: 1px dotted #ff3b3f;
+}
+
+/* NAVBAR */
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(202, 235, 242, 0);
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.navbar-brand {
+  color: #1d1d1d;
+  font-size: 1.3em;
+}
+a.navbar-brand:hover,
+a.navbar-brand:active {
+  color: #1d1d1d;
+  border-bottom: none;
+}
+.navbar-nav li.nav-item a.nav-link {
+  color: #1d1d1d;
+  font-size: 0.9em;
+  transition: color 0.5s ease;
+}
+.navbar-nav li.nav-item a.nav-link:hover,
+.navbar-nav li.nav-item a.nav-link.active {
+  color: #ff3b3f;
+  border-bottom: none;
+}
+.fa {
+  color: #1d1d1d;
+}
+
+/* HEADER IMAGE */
+.header-img {
+  background-image: url("../img/0-main-sm.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 20em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* CARDS */
+.card {
+  border-radius: 0;
+}
+.card-header {
+  color: #272727;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.card-title {
+  color: #9b9b9b;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #ff3b3f;
+  padding-bottom: 0.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.card-text {
+  font-size: 0.9rem;
+  font-family: "Open Sans", sans-serif;
+}
+.card-img-top {
+  border-radius: 0;
+}
+#fact-card .card-text {
+  text-align: center;
+}
+#fact-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #caebf2 !important;
+}
+#profile-lg { /* hides 'profile' card designed for large screens */
+  display: none;
+}
+.card-img-left {
+  display: inline-block;
+  float: right;
+  width: 100%;
+  height: 100%;
+}
+.full-width {
+  width: 100%;
+  height: auto;
+}
+
+/* FOOTER */
+footer {
+  background-color: #1d1d1d;
+  color: #e0e0e0;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+  body {
+    font-size: 110%;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .header-img {
+    background-image: url("../img/0-main-md.jpg");
+    height: 30em;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 120%;
+  }
+  .navbar-brand {
+    font-size: 2em;
+  }
+  .navbar-nav li.nav-item a.nav-link {
+    font-size: 1em;
+  }
+  .card-text {
+    font-size: 1rem;
+  }
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    font-size: 130%;
+  }
+  h1 {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .header-img {
+    background-image: url("../img/0-main-lg.jpg");
+    height: 40rem;
+  }
+  .navbar-nav li.nav-item a.nav-link {
+    font-size: 1.2em;
+  }
+  .card-text {
+    font-size: 1.1rem;
+  }
+  #profile-lg {
+    display: block;
+  }
+
+  #profile-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  #profile-lg .card-text {
+    font-size: 1.3rem;
+  }
+}
