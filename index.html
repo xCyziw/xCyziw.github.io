@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="title" content="Pixel Studio - Create Your Own Pixel Graphics">
+    <meta name="description" content="A simple tool for creating, editing, and downloading your own pixel graphics">
+    <meta name="keywords" content="Pixel,Graphic,Graphics,Draw,Paint,Tiny,Art,Create">
+    <meta name="author" content="Laura Freeman">
+    <meta name="revised" content="2/7/2018">
+
+    <title>Pixel Studio</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <!-- normalize across browsers -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" rel="stylesheet">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+    <!-- Font Awesome icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- jQuery library -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Spectrum color picker library http://bgrins.github.io/spectrum/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+    <!-- include JavaScript file -->
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+
+    <div class="options">
+        <h1>Pixel Studio
+            <a class="dropdown-link">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </h1>
+        <div class="dropdown">
+            <p>Welcome to Pixel Studio, your very own pixel graphic editor. Begin by creating a new canvas below.</p>
+            <h2>Create New</h2>
+            <form id="create-new">
+                <label for="input-size" id="size-label" aria-required="true">Pixels per cell (5 - 30): </label>
+                <input type="number" id="input-size" name="size" min="5" max="30" value="20" required>
+                <label for="input-width" id="width-label" aria-required="true">Width: </label>
+                <input type="number" id="input-width" name="width" min="1" max="16" value="10" required>
+                <label for="input-height" id="height-label" aria-required="true">Height: </label>
+                <input type="number" id="input-height" name="height" min="1" max="32" value="10" required>
+                <label for="bg-picker" aria-required="false">Background (optional): </label>
+                <input id="bg-picker" id="bgcolor-label">
+                <input type="submit" id="create" value="Create">
+            </form>
+
+            <h2>Tools</h2>
+            <input type="button" id="eraser" value="Eraser">
+            <input type="button" id="clear" value="Clear Canvas">
+            <input type="button" id="toggle-grid" value="Toggle Grid">
+
+            <h2>Preview</h2>
+            <input type="button" id="preview" value="Show Preview">
+            <div id="preview-content">
+                <div id="preview-container">
+                    <canvas id="resized-canvas"></canvas>
+                </div>
+            </div>
+            <input type="button" id="save-pixel" value="Save as Pixel Graphic">
+            <input type="button" id="save-full" value="Save at Editor Size">
+<p class="fine-print">Website and content by Laura Freeman (2018).</p>
+        </div>
+    </div>
+
+    <div class="main">
+        <div id="contain-canvas">
+            <canvas id="grid-overlay"></canvas>
+            <canvas id="pixel-canvas"></canvas>
+            <div id="color-container"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
